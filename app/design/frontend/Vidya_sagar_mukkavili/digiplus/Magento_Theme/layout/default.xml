@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+
+        <referenceBlock name ="logo">
+            <arguments>
+                    <argument name="logo_file" xsi:type="string">images/digiplus-logo.png</argument>
+                        <argument name="logo_width" xsi:type="number">150</argument>
+                        <argument name="logo_height" xsi:type="number">150</argument>
+                        <argument name="logo_alt" xsi:type="string">DigiPlus Logo</argument>
+            </arguments>
+        </referenceBlock>
+
+
+
+
+        <!-- Removing the panel on the top -->
+        <referenceContainer name="header.panel.wrapper" remove="true"  />
+
+
+        <!-- Header area -->
+
+        <referenceContainer name="header.container" >
+            <container name="navigation.container.vs" htmlTag="div" htmlClass="main-navigation__container">
+            <referenceContainer name="header-wrapper">
+                <block class="Magento\Framework\View\Element\Template" name="navigationitemsvs"  template="Magento_Theme::header-wrapper-vsm.phtml" after="top.search" /> 
+            </referenceContainer> 
+        </container>
+
+        </referenceContainer>
+        
+        <move element="navigation.sections" destination="navigation.container.vs" as="new.custom.nav.vs" after="header-wrapper" />
+
+
+    <!-- <container name="hero.image.vs"> -->
+
+
+    <!-- Main Content Section -->
+
+        <!-- Hero Image -->
+        <referenceContainer name="main">
+        
+                <container name="hero.image.vs" htmlTag="div" htmlClass="hero-image-vs" after="page.top">
+                    <!-- <block class="Magento\Framework\View\Element\Template" name="hero.image-block.vs" template="DigiPlus_MainContent::main-content.phtml"/> -->
+                </container>
+                
+
+                <!-- <container name="five.categories.grid.vs" htmlTag="div" htmlClass="five-categories__grid-vs">
+                    <block class="Magento\Theme\Block\Html\Topmenu" name="category.grid.vs" template="DigiPlus_MainContent::category-grid.phtml" />
+                </container> -->
+
+
+            <!-- New Arrivals Section -->
+
+            <container name="new.arrivals.vs" htmlTag="div" htmlClass="vs-new-arrivals" before="store.features.vs">
+
+            </container>
+
+            <!-- Store Features -->
+            <container name="store.features.vs" htmlTag="div" htmlClass="vs-store-features" before="footer-container">
+                <block name="store.features.block.vs" class="Magento\Framework\View\Element\Template" template="Magento_Theme::store_features.phtml" />
+            </container>
+
+        </referenceContainer>
+
+
+<!-- Footer -->
+
+    <!-- Removing uneccesary elements -->
+    <referenceBlock  name="form.subscribe" remove="true" />
+    <referenceBlock  name="footer_links" remove="true" />
+
+
+    <referenceContainer name="footer-container">
+        <container name="copyright.vs" htmlTag="div" htmlClass="vs-copyright copyright">
+
+
+            <!-- Footer div 01 -->
+                <container name="footer.div01.vs" htmlTag="div" htmlClass="vs-footer__div01 vs__flex-column">
+                    <block name="connect.with.us.vs" class="Magento\Framework\View\Element\Template" template="Magento_Theme::connect_with_us.phtml" />
+                    <block name="subscribe.vs" class="Magento\Framework\View\Element\Template" template="Magento_Theme::subscribe.phtml" />
+                    <block name="social.links.vs" class="Magento\Framework\View\Element\Template" template="Magento_Theme::social_links.phtml" />
+                </container>
+            <!-- Footer div 02 -->
+                <container name="footer.div02.vs" htmlTag="div" htmlClass="vs-footer__div02 vs__flex-column">
+                    <block name="useful.links.vs" class="Magento\Framework\View\Element\Template" template="Magento_Theme::useful_links.phtml" />
+                </container>
+
+            <!-- Footer div 03 -->
+                <container name="footer.div03.vs" htmlTag="div" htmlClass="vs-footer__div03 vs__flex-column">
+                    <block name="products.vs" class="Magento\Framework\View\Element\Template" template="Magento_Theme::products.phtml" />
+                </container>
+
+        <!-- Remove the original footer -->
+                <!-- <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/> -->
+            <referenceBlock name="copyright" remove="true" />
+        </container>
+    </referenceContainer>
+
+     </body>
+
+</page>

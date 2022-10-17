@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+
+    <referenceContainer name="main">
+        <container name="new.product.list.vs" after="-" htmlTag="div" htmlClass="new-product-list-vs">
+            <block name="new.product.list.renderer.vs" class="Magento\Framework\View\Element\Template" template="Magento_Catalog::new_list.phtml" />
+        </container>
+    </referenceContainer>
+</layout>
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+   <page_layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/PageLayout/etc/layouts.xsd"> 
+       <layout id="layout-id">
+           <label translate="true">New List for New Products</label>
+        </layout>
+   </page_layouts> -->

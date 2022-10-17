@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+
+    <widget id="new_products" class="Magento\Catalog\Block\Product\Widget\NewWidget" is_email_compatible="true" placeholder_image="Magento_Catalog::images/product_widget_new.png" ttl="86400">
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                            <option name="list" value="Magento_Checkout::product/widget/new/content/new_list.phtml">
+                                <label translate="true">New Products List Template</label>
+                            </option>
+            </parameter>
+    </widget>
+</widgets>
+
+            

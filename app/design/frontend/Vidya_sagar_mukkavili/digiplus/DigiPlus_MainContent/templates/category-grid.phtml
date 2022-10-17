@@ -1,0 +1,22 @@
+<?php
+
+// $columnsLimit = 5;
+// $columnsLimit = null;
+// column list tells the number of layered levels that will be displayed. null means all will show up.
+
+$columnsLimit = $block->getColumnsLimit() ?: 0;
+// $columnsLimit = $block->getColumnsLimit() ?: 0;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+?>
+
+
+
+<!-- <p>Testing the template to see if it is working</p> -->
+
+<ul class="vs-category-ulist__grid" data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+    <?= /* @noEscape */ $_menuHtml ?>
+    <?php
+    // echo $block->getChildHtml() 
+    ?>
+
+</ul>

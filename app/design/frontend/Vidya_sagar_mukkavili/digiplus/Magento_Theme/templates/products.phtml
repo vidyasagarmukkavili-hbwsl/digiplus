@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// column list tells the number of layered levels that will be displayed. null means all will show up.
+$columnsLimit = $block->getColumnsLimit() ?: 0;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit);
+?>
+
+<h3 class="vs-footer_heading">Products</h3>
+
+<ul class="vs-category-ulist__grid-footer">
+    <li class="vs-footer__list-item__products"><a href="#">Mobiles</a></li>
+    <li class="vs-footer__list-item__products"><a href="#">Tablets</a></li>
+    <li class="vs-footer__list-item__products"><a href="#">Laptops</a></li>
+    <li class="vs-footer__list-item__products"><a href="#">Speakers</a></li>
+    <li class="vs-footer__list-item__products"><a href="#">Refrigerators</a></li>
+    <li class="vs-footer__list-item__products"><a href="#">Cameras</a></li>
+    <li class="vs-footer__list-item__products"><a href="#">More</a></li>
+</ul>

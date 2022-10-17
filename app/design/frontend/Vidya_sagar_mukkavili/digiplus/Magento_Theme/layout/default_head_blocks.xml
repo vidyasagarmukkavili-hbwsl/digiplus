@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- <css src="css/styles-m.css"/> -->
+        <!-- <css src="css/styles-l.css" media="screen and (min-width: 768px)"/> -->
+        <!-- <css src="css/print.css" media="print"/> -->
+        <!-- <meta name="format-detection" content="telephone=no"/> -->
+
+
+        <css src="css/vscustom.css" rel="stylesheet" type="text/css" />
+        <!-- The favicon -->
+        <!-- <link src="Magento_Theme::icons8-l-67.png" rel="icon" sizes="67x67" /> -->
+
+        <!-- <link rel="stylesheet" type="url" src="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" src_type="url"/> -->
+
+        <!-- <link rel="stylesheet" src="css/fontawesome.css" type="text/css"/> -->
+        <!-- <link rel="stylesheet" src="css/solid.css" type="text/css"/> -->
+        <!-- <link rel="stylesheet" src="css/brands.css" type="text/css"/> -->
+
+
+        <!-- Font Awesome -->
+
+        <link rel="stylesheet" src="css/fontawesome.min.css" type="text/css"/>
+        <link rel="stylesheet" src="css/solid.min.css" type="text/css"/>
+        <link rel="stylesheet" src="css/brands.min.css" type="text/css"/>
+        <link rel="stylesheet" src="regular.min.css" type="text/css"/>
+
+    </head>
+</page>
